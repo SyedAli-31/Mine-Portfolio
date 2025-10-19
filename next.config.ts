@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'stratix-labs.vercel.app',
+        hostname: 'mine-portfolio.vercel.app',
         pathname: '/**',
       },
       {
