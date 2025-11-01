@@ -5,23 +5,24 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 interface NavItem {
   name: string;
   href: string;
 }
 
 const navItems: NavItem[] = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Blog", href: "#blog" },
-
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/projects" },
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,9 +33,16 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    // If the href starts with "#", it’s a section scroll
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsMobileMenuOpen(false);
+      }
+    } else {
+      // Otherwise, navigate to the page
+      router.push(href);
       setIsMobileMenuOpen(false);
     }
   };
@@ -42,8 +50,8 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? "bg-[#0F172A]/90 backdrop-blur-sm border-b border-[#1E293B]/50"
-        : "bg-transparent"
+          ? "bg-[#0F172A]/90 backdrop-blur-sm border-b border-[#1E293B]/50"
+          : "bg-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,9 +63,8 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className={`text-[20px] md:text-3xl font-heading`}>
-              <Link href={"/"}> Syed Ali Hussaini </Link>
-
+            <h1 className="text-[20px] md:text-3xl font-heading text-white">
+              <Link href="/">Syed Ali Hussaini</Link>
             </h1>
           </motion.div>
 
@@ -125,6 +132,12 @@ export default function Navigation() {
                   {item.name}
                 </button>
               ))}
+              <Button
+                onClick={() => scrollToSection("#contact")}
+                className="w-full bg-[#3B82F6] text-white mt-3 py-2 rounded-lg text-base font-medium hover:bg-[#3B82F6]/90"
+              >
+                Contact
+              </Button>
             </div>
           </motion.div>
         )}

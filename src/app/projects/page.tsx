@@ -67,6 +67,22 @@ const allProjects: Project[] = [
     },
     {
         id: 4,
+        title: "Glovious",
+        description: "Leading manufacturer of premium protective gloves for industrial, mechanical, welding, and safety applications. Trusted by industries worldwide.",
+        longDescription: "Glovious is a premium glove manufacturing brand specializing in industrial, mechanical, welding, and safety applications. The website highlights the brands global quality standards, product range, and commitment to worker protection through a clean, responsive design and modern technology stack.",
+        image: "/gloviuos2.JPG",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Whatsapp Integration", "Web3Forms"],
+        liveUrl: "https://glovious.vercel.app/",
+        codeUrl: "https://github.com/SyedAli-31/Glovious",
+        category: "Industrial Manufacturing",
+        year: "2025",
+        status: "Live",
+        features: ["Comprehensive product category navigation",
+            "Professional corporate branding and visuals", "Whatsapp Integration", "Responsive multi-device layout",]
+
+    },
+    {
+        id: 6,
         title: "Syed Organics",
         description: "Nature-inspired herbal wellness brand offering 100% organic, chemical-free products.",
         longDescription: "Syed Organics is a comprehensive e-commerce platform for organic wellness products. Built with modern headless CMS architecture, it features advanced product filtering, secure payment processing, inventory management, and customer review systems.",
@@ -74,7 +90,7 @@ const allProjects: Project[] = [
         technologies: ["React", "Sanity CMS", "TypeScript", "NodeJs", "Next.js"],
         liveUrl: "https://syed-organics.vercel.app/",
         codeUrl: "https://github.com/SyedAli-31/Syed-Organics",
-        category: "E-commerce",
+        category: "Organic Herbal",
         year: "2024",
         status: "Live",
         features: ["Product Catalog", "Inventory Management", "Customer Reviews"]

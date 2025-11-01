@@ -44,13 +44,14 @@ const projects: Project[] = [
     codeUrl: "https://github.com/SyedAli-31/LunchHub",
   },
   {
-    title: "Syed Organics",
-    description: "Syed Organics is a nature-inspired herbal wellness brand dedicated to offering 100% organic, chemical-free products. The brand's mission is bring people closer to nature while ensuring quality, safety, and everything it offers.",
-    image: "/SyedOrganics.JPG",
-    technologies: ["React", "Sanity CMS", "TypeScript", "NodeJs", "Next.js"],
-    liveUrl: "https://syed-organics.vercel.app/",
-    codeUrl: "https://github.com/SyedAli-31/Syed-Organics",
+    title: "Glovious",
+    description: "Leading manufacturer of premium protective gloves for industrial, mechanical, welding, and safety applications. Trusted by industries worldwide.",
+    image: "/gloviuos.JPG",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Whatsapp Integration", "Web3Forms"],
+    liveUrl: "https://glovious.vercel.app/",
+    codeUrl: "https://github.com/SyedAli-31/Glovious",
   },
+  
   // Amazon Clone removed from main page - will show in /projects page only
 ];
 

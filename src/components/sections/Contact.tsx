@@ -187,7 +187,7 @@ const Contact = () => {
                   )}
                   <Button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-gray-700 py-6"
+                    className="w-full bg-[#3b82f6] hover:bg-primary/90 text-gray-200 py-6"
                     size="lg"
                     disabled={isSubmitting}
                   >
